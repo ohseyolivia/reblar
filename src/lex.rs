@@ -29,10 +29,7 @@ impl Token {
         }
     }
     pub fn indent(&self) -> bool {
-        match self {
-            Self::Indent => true,
-            _ => false
-        }
+        self == &Self::Indent
     }
     pub fn char_lit(&self) -> Option<char> {
         match self {
